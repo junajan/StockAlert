@@ -21,8 +21,8 @@ var colors = require('colors');
 var toEmail = 'some@email.tld';
 var fromEmail = 's@t.c';
 var emailTitle = "";
-var treshold = 4;
-var decPrecision = 2;
+var treshold = 4;		// min allowed difference between SMA and closePrice
+var decPrecision = 2;	// precision of counted differecens
 var today;
 
 var fetch = {
