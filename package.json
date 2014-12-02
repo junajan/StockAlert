@@ -1,0 +1,21 @@
+{
+  "name": "StockMarketWatcher",
+  "version": "0.0.1",
+  "description": "Node.JS stock market watcher for given indexes",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "async": "0.9.0",
+    "colors": "1.0.3",
+    "node-schedule": "0.1.13",
+    "nodemailer": "1.3.0",
+    "yahoo-finance": "0.2.10"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  },
+  "author": "Jan Juna <mail@janjuna.cz>"
+}
