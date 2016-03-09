@@ -7,20 +7,20 @@ app.set("config", conf);
 app.mailer = require('./modules/Mailer')(app);
 
 var indicators = {
-	SMA: ['10', '20'],
-	RSIWILDERS: ['10']
+	SMA: [5, 10, 20, 100],
+	RSIWILDERS: [2]
 };
 
 var tickers = {
 	"UPRO": {
-		'test': "1 < 2",
-		'test2': "1 < 2",
-		'buyLow': "SMA(10) < PRICE && SMA(20) > SMA(10) && RSIWILDERS(10) < 10"
+		'buy100': "SMA(100) > PRICE && RSIWILDERS(2) < 10",
+		'buyLow': "SMA(5) > PRICE && RSIWILDERS(2) < 10",
+		'sellHigh': "RSIWILDERS(2) > 80"
 	},
-	// "SSO": {
-	// 	'sellHigh': 'RSI(10) > 90'
-	// }
-}
+	"LABD": {
+		'buy100': "SMA(100) > PRICE && RSIWILDERS(2) < 15",
+	},
+};
 
 var StockAlert = require("./modules/StockAlert")(app);
 StockAlert.setConfig(indicators, tickers);
