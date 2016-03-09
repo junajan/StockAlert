@@ -50,7 +50,7 @@ var Mailer = function(app) {
 	};
 
 	this.sendStartMessage = function() {
-		var title = config.env+" StockAlert was stared";
+		var title = "StockAlert was stared";
 		var msg = 'StockAlert bot was started at '+getFullDate(moment());
 
 		console.log('Sending welcome email');
